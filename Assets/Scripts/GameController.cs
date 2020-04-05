@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject hazard;
+    public GameObject[] hazards;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -15,9 +15,12 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text restartText;
     public Text gameOverText;
+    public Text winText;
     private int score;
     private bool gameOver;
     private bool restart;
+    private bool gameWin;
+    private bool gameWinoverride;
 
     void Start()
     {
@@ -26,8 +29,11 @@ public class GameController : MonoBehaviour
         StartCoroutine(SpawnWaves());
         gameOver = false;
         restart = false;
+        gameWin = false;
+        gameWinoverride = false;
         restartText.text = "";
         gameOverText.text = "";
+        winText.text = "";
     }
     void Update()
     {
@@ -37,7 +43,7 @@ public class GameController : MonoBehaviour
         }
         if (restart)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 SceneManager.LoadScene("main");
             }
@@ -51,6 +57,7 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
+                GameObject hazard = hazards[Random.Range (0, hazards.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(hazard, spawnPosition, spawnRotation);
@@ -60,7 +67,7 @@ public class GameController : MonoBehaviour
 
             if (gameOver)
             {
-                restartText.text = "Press 'R' for Restart";
+                restartText.text = "Press 'Q' for Restart";
                 restart = true;
                 break;
             }
@@ -71,15 +78,32 @@ public class GameController : MonoBehaviour
     {
         score += newScoreValue;
         UpdateScore();
+        if(score >= 100)
+        {
+            WinGame();
+        }
     }
     public void GameOver()
     {
-        gameOverText.text = "Game Over!";
-        gameOver = true;
+        if (gameWin == false)
+        {
+            gameOverText.text = "Game Over!";
+            gameOver = true;
+            gameWinoverride = true;
+        }
     }
 
     void UpdateScore()
     {
-        ScoreText.text = "Score: " + score;
+        ScoreText.text = "Points: " + score;
+    }
+    public void WinGame()
+    {
+        if (gameWinoverride == false)
+        {
+            winText.text = "Game Created By Josh Wiggins";
+            gameOver = true;
+            gameWin = true;
+        }
     }
 }

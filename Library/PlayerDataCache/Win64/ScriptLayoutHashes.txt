@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Josh/Desktop/gameyclass/tutorial 3/project3/Wiggins_Joshua_DIG3480_Tutorial3/Space Shooter.exe
+C:/Users/Josh/Documents/GitHub/howdy - Copy/Wiggins_Joshua_DIG3480hallenge3/Space Shooter.exe
 SceneListBegin?
 Assets/_scene/main.unity
 SceneListEnd?
@@ -160,17 +160,20 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 813a98d7c38886af7cdb0e991a546577 Assembly-CSharp.dll:.RandomRotator
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
+d3bbd1f86b55a6168b664522b2cf57b3 Assembly-CSharp.dll:.DestroyByTime
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Mover
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 37a6fe73039cdf70b1437f5433ad45c2 Assembly-CSharp.dll:.PlayerController
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 d87a00c7a10bfacb889f2e1d042dc43a Assembly-CSharp.dll:.Done_PlayerController
+771eb50682dc4864dd0e27094c1aa245 Assembly-CSharp.dll:.GameController
 813a98d7c38886af7cdb0e991a546577 Assembly-CSharp.dll:.Done_RandomRotator
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 be2d1663d6bc8ce39ce9c8dea6a963c7 Assembly-CSharp.dll:.Done_BGScroller
 3aeec2416520303994f9d66901c73317 Assembly-CSharp.dll:.DestroyByContact
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+be2d1663d6bc8ce39ce9c8dea6a963c7 Assembly-CSharp.dll:.bgscroller
 96579b1d7c32aebb6c65db101ee7a10b Assembly-CSharp.dll:.Done_GameController
-7a42db6d9f4b73aecd1554b5626150aa Assembly-CSharp.dll:.GameController
-d3bbd1f86b55a6168b664522b2cf57b3 Assembly-CSharp.dll:.DestroyByTime
+de7d6a5820dded6c7f75780e98f1dc41 Assembly-CSharp.dll:.WeaponController
+757d56d0910fdc18d03e5b801da35a3f Assembly-CSharp.dll:.EvasiveManeuver
